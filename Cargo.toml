@@ -1,0 +1,16 @@
+[package]
+name = "dcgo-launcher"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1"
+directories = "5"
+# Use rustls to avoid an OpenSSL dependency on Linux and Windows.
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+zip = "2"
+ratatui = "0.30"
+crossterm = "0.29"
